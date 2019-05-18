@@ -1,0 +1,26 @@
+﻿<app-menu></app-menu>
+<div class="w3-small" >
+        <h3 runat="server" id ="signin">Sign In</h3>
+        <div>
+
+            <form (ngSubmit)="signin()">
+                <div class="w3-center w3-row-padding w3-margin-top">
+                    <label class="w3-half w3-medium w3-right-align w-50">Student Number:</label>
+                    <input type="text" [(ngModel)]="credentials.studentNumber" style="width:200px"
+                        name="studentNumber" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+                </div>
+                <div class="w3-center w3-row-padding w3-margin-top">
+                    <label class="w3-half w3-medium w3-right-align w-50">Password:</label>
+                    <input type="password" [(ngModel)]="credentials.password" style="width:200px"
+                        name="password" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+                </div>
+                <div class="w3-center w3-row-padding w3-margin-top">
+                    <input type="submit" value="Sign In"  class=" w3-row-padding w3-button w3-red w3-padding w3-round w3-center">
+                    <input type="button" value="Cancel" (click)="cancel()"  class=" w3-row-padding w3-button w3-red w3-padding w3-round w3-center">
+                </div>
+                <div class="w3-bar w3-center error" style="color:red;">
+                        <span>{{errorMessage}}</span>
+                </div>
+            </form>
+    </div>
+</div>

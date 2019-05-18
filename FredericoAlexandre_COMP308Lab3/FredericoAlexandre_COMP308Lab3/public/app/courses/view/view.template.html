@@ -1,0 +1,16 @@
+﻿<app-menu></app-menu>
+<section *ngIf="course">
+    <div class="w3-small">
+        <h3 runat="server" id ="Courses">Course</h3>
+        <div>
+                <h6>{{course.name}}</h6>
+                <p>{{course.code}} Section: {{course.section}} - Semester: {{course.semester}}</p>
+                <div *ngIf="allowEdit">
+                    <a [routerLink]="['/courses', course._id, 'edit']" class=" w3-row-padding w3-button w3-red w3-padding w3-round w3-center">edit</a>
+                    <button (click)="drop()" class=" w3-row-padding w3-button w3-red w3-padding w3-round w3-center">drop</button>
+                    <button (click)="cancel()" class=" w3-row-padding w3-button w3-red w3-padding w3-round w3-center">cancel</button>
+                </div>
+        </div>
+    </div>
+</section>
+    

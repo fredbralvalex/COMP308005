@@ -1,0 +1,3 @@
+D:\Arquivos\Projetos\Academico\Centennial\Comp308_VisualStudio\FredericoAlexandre_COMP308Lab2\FredericoAlexandre_COMP308Lab2\obj\Debug\FredericoAlexandre_COMP308Lab2.njsprojAssemblyReference.cache
+D:\Arquivos\Projetos\Academico\Centennial\Comp308_VisualStudio\FredericoAlexandre_COMP308Lab2\FredericoAlexandre_COMP308Lab2\obj\Debug\FredericoAlexandre_COMP308Lab2.njsproj.CoreCompileInputs.cache
+D:\Arquivos\Projetos\Academico\Centennial\Comp308_VisualStudio\FredericoAlexandre_COMP308Lab2\FredericoAlexandre_COMP308Lab2\bin\Microsoft.NodejsTools.WebRole.dll

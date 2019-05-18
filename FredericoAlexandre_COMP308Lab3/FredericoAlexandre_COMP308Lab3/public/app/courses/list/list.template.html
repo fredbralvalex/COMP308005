@@ -1,0 +1,19 @@
+﻿<app-menu></app-menu>
+<div class="w3-small">
+    <h3 runat="server" id ="Courses">Courses</h3>
+    <div class="w3-row-padding" style="width:30%;margin-left: 35%">
+        <ul>
+            <li *ngFor="let course of courses">
+                <a [routerLink]="['/courses', course._id]">{{course.name}}</a>
+                <p>{{course.code}} Section: {{course.section}} - Semester: {{course.semester}}</p>
+            </li>
+        </ul>
+        <div *ngIf="courses && courses.length === 0">
+            No courses added yet, why don't you <a [routerLink]="['/courses/add']">Add one</a>?
+        </div>
+        <div>
+            <button [routerLink]="['/courses/add']" class="w3-row-padding w3-button w3-red w3-padding w3-round w3-center">Add</button>
+            <button [routerLink]="['/']" class="w3-row-padding w3-button w3-red w3-padding w3-round w3-center">Back</button>
+        </div>
+    </div>
+</div>

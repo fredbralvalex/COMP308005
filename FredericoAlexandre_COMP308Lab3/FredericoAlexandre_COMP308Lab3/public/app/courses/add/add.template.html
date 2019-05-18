@@ -1,0 +1,35 @@
+﻿<app-menu></app-menu>
+<div class="w3-small">
+    <h3 runat="server" id ="Add">Add Course</h3>
+    <div >
+        <form (ngSubmit)="add()" novalidate>
+                <div class="w3-center w3-row-padding w3-margin-top">
+                    <label class="w3-half w3-medium w3-right-align w-50" for="name" >Name:</label>
+                    <input type="text" required [(ngModel)]="course.name"  style="width:200px;"
+                            name="name" placeholder="Name" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+                </div>
+                <div class="w3-center w3-row-padding w3-margin-top">
+                    <label class="w3-half w3-medium w3-right-align w-50" for="code" >Code:</label>
+                    <input type="text" required [(ngModel)]="course.code" style="width:200px;"
+                            name="code" placeholder="Code" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+                </div>
+                <div class="w3-center w3-row-padding w3-margin-top">
+                    <label class="w3-half w3-medium w3-right-align w-50" for="section" >Section:</label>
+                    <input type="text" required [(ngModel)]="course.section" style="width:200px;"
+                            name="section" placeholder="Section" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+                </div>
+                <div class="w3-center w3-row-padding w3-margin-top">
+                    <label class="w3-half w3-medium w3-right-align w-50" for="semester" >Semester</label>
+                    <input type="text" required [(ngModel)]="course.semester" style="width:200px;"
+                            name="semester" placeholder="Semester" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+                </div>            
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <input type="submit" value="Add"  class=" w3-row-padding w3-button w3-red w3-padding w3-round w3-center">
+                <input type="button" value="Cancel" (click)="cancel()"  class=" w3-row-padding w3-button w3-red w3-padding w3-round w3-center">
+            </div>
+            <div class="w3-bar w3-center error" style="color:red;">
+                    <span>{{errorMessage}}</span>
+            </div>
+        </form>
+    </div>
+</div>

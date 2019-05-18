@@ -1,0 +1,13 @@
+<div id="menu" runat="server" class="w3-center w3-padding">        
+    <div *ngIf="student">
+            <h4>Hello {{student.firstName}} - {{student.studentNumber}}</h4>
+            <a  class="menu-item" [routerLink]="['/courses']">My Courses</a>
+            <a  class="menu-item" href="/api/auth/signout">Signout</a>
+        </div>
+        <div *ngIf="!student">
+            <a class="menu-item" [routerLink]="['/']">Home</a>
+            <a class="menu-item" [routerLink]="['/authentication/signup']">Signup</a>
+            <a class="menu-item" [routerLink]="['/authentication/signin']">Signin</a>
+        </div>
+    </div>
+    

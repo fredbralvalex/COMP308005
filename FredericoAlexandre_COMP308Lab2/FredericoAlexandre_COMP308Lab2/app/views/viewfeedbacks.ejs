@@ -1,0 +1,43 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", Arial, Helvetica, sans-serif
+        }
+    </style>
+    <title>View Feedbacks</title>
+
+</head>
+<body>
+    <form method="post">
+        <div class="w3-center">
+            <H1>FeedBacks of users!</H1>
+        </div>
+        <div class="w3-left" style="margin-left: 450px;">
+            <ul>
+                <% for(var [key, value] of feedbacks) { %>
+                <li>
+                    <%= key %>
+                    <ul>
+                        <% for(var j=0; j < value.length; j++) { %>
+                        <li>
+                            <%= value[j].comments %>
+                        </li>
+                        <% } %>
+                    </ul>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </form>
+    <div class="w3-bar w3-center">
+        <a href="/logout">
+            Logout
+        </a>
+    </div>
+</body>
+</html>

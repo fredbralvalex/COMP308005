@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", Arial, Helvetica, sans-serif
+        }
+
+        error {
+            color: red;
+            font-style:oblique;
+        }
+    </style>
+    <title>Login</title>
+
+</head>
+<body>
+    <div class="w3-center">
+        <H1>Login</H1>
+        <%if(typeof errorMsg !== 'undefined'){%>
+        <div class="w3-bar w3-center error" style="color:red;">
+            <%=errorMsg%>
+        </div>
+        <%}%>
+        <form method="post" action="/">
+            <div class="w3-bar w3-center">
+
+                <div class="w3-padding w3-right-align">
+                    <label> User Name :</label>
+                    <input type="text" placeholder="Enter your user name or email"
+                           name="email" class="w3-border w3-round" style="height:30px; width:220px;" />
+                </div>
+                <div class="w3-padding w3-right-align">
+                    <label> Password :</label>
+                    <input type="password" name="password" class="w3-border w3-round" style="height:30px; width:220px;" /> <br />
+                </div>
+                <input type="submit" value="Submit" name="submit" class="w3-button w3-black w3-padding w3-round" />
+            </div>
+        </form>
+        <div class="w3-bar w3-center">
+            <a href="/signup">
+                Sign Up
+            </a>
+        </div>
+    </div>
+</body>
+</html>

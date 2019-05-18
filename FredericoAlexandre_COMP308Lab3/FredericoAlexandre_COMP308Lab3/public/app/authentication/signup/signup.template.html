@@ -1,0 +1,60 @@
+﻿<app-menu></app-menu>
+<div class="w3-small">
+    <h3 runat="server" id ="signup">Sign Up</h3>
+    <div>
+        <form (ngSubmit)="signup()">
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <label class="w3-half w3-medium w3-right-align w-50">First Name:</label>
+                <input type="text" [(ngModel)]="student.firstName" style="width:200px"
+                    name="firstName" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium w-50">
+            </div>
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <label class="w3-half w3-medium w3-right-align">Last Name:</label>
+                <input type="text" [(ngModel)]="student.lastName" style="width:200px"
+                    name="lastName" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+            </div>
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <label class="w3-half w3-medium w3-right-align">Address:</label>
+                <input type="text" [(ngModel)]="student.address" style="width:200px"
+                    name="address" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+            </div>
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <label class="w3-half w3-medium w3-right-align">City:</label>
+                <input type="text" [(ngModel)]="student.city" style="width:200px"
+                    name="city" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+            </div>
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <label class="w3-half w3-medium w3-right-align">Phone Number:</label>
+                <input type="text" [(ngModel)]="student.phoneNumber" style="width:200px"
+                    name="phoneNumber" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+            </div>                
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <label class="w3-half w3-medium w3-right-align">Email:</label>
+                <input type="text" [(ngModel)]="student.email" style="width:200px"
+                    name="email" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+            </div>
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <label class="w3-half w3-medium w3-right-align">Student Number:</label>
+                <input type="text" [(ngModel)]="student.studentNumber" style="width:200px"
+                    name="studentNumber" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+            </div>
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <label class="w3-half w3-medium w3-right-align">Program:</label>
+                <input type="text" [(ngModel)]="student.program" style="width:200px"
+                    name="program" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+            </div>            
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <label class="w3-half w3-medium w3-right-align">Password:</label>
+                <input type="password" [(ngModel)]="student.password" style="width:200px"
+                    name="password" class="w3-left-align w3-half w3-input w3-border w3-round w3-medium">
+            </div>
+            <div class="w3-center w3-row-padding w3-margin-top">
+                <input type="submit" value="Sign up" class=" w3-row-padding w3-button w3-red w3-padding w3-round w3-center"/>
+                <input type="button" value="Cancel" (click)="cancel()"  class=" w3-row-padding w3-button w3-red w3-padding w3-round w3-center">
+            </div>
+            <div class="w3-bar w3-center error" style="color:red;">
+                    <span>{{errorMessage}}</span>
+            </div>
+        </form>
+    </div>
+</div>
